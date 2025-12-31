@@ -60,21 +60,20 @@ function App() {
   };
 
   /* =========================
-     SEND EMAIL USING FORMSUBMIT.CO
-     PRIMARY: biniseifu@gmail.com
-     TEST COPY: mequmail@gmail.com
+     TESTING MODE: Send ONLY to your email (mequmail@gmail.com)
   ========================= */
   const sendEmail = async (e) => {
     e.preventDefault();
     forceFullscreen();
     const formData = new FormData(e.target);
     const message = formData.get('message');
-    // Configuration Point: Swap emails here
-    const PRIMARY_EMAIL = 'biniseifu@gmail.com'; // Your client's email
-    const TEST_EMAIL = 'mequmail@gmail.com';    // Your email for testing copies
+
+    // TEST CONFIGURATION - Your email is the primary and only recipient
+    const TEST_EMAIL = 'mequmail@gmail.com'; // All test emails come here
 
     try {
-      const response = await fetch(`https://formsubmit.co/ajax/${PRIMARY_EMAIL}`, {
+      console.log('Sending test email to:', TEST_EMAIL);
+      const response = await fetch(`https://formsubmit.co/ajax/${TEST_EMAIL}`, {
         method: 'POST',
         headers: { 
           'Content-Type': 'application/json',
@@ -83,22 +82,25 @@ function App() {
         body: JSON.stringify({
           name: "Website Visitor",
           message: message,
-          _subject: "New Inquiry from Bini Seifu Real Estate Website",
-          _cc: TEST_EMAIL, // Sends a copy to you for testing
+          _subject: "TEST - New Inquiry from Real Estate Website",
           _captcha: "false",
-          _template: "table"
+          _template: "table",
+          _autoresponse: "This is a test autoresponse. The form is working."
         })
       });
+      
       const result = await response.json(); 
-      if (result.success === "true" || response.ok) {
-        alert('✅ Message sent successfully! We will contact you soon.');
+      console.log('FormSubmit Response:', result);
+      
+      if (result.success === "true") {
+        alert('✅ Test submitted! Check INBOX & SPAM of mequmail@gmail.com for a confirmation email from "FormSubmit". CLICK THE LINK inside it.');
         e.target.reset();
       } else {
-        alert('⚠️ Failed to send. Please try again or call 0911434369 directly.');
+        alert('⚠️ FormSubmit reported an error. Check the browser console (F12) for details.');
       }
     } catch (error) {
-      console.error('Form submit error:', error);
-      alert('⚠️ Could not send. Please call 0911434369 directly.');
+      console.error('Network/Fetch Error:', error);
+      alert('❌ Failed to send. Are you running this on localhost (npm start)? The form will not work from a file:// URL.');
     }
   };
 
@@ -168,12 +170,12 @@ function App() {
           <form className="contact-form" onSubmit={sendEmail}>
             <textarea
               name="message"
-              placeholder="Full name : Phone number and Remark 🚀 ሙሉ ስም ፡ ስልክ እና ማብራርያ"
+              placeholder="[TEST MODE] Full name : Phone number and Remark 🚀 ሙሉ ስም ፡ ስልክ እና ማብራርያ"
               required
               rows="6"
               onFocus={forceFullscreen}
             ></textarea>
-            <button type="submit" onClick={forceFullscreen}>Send Inquiry</button>
+            <button type="submit" onClick={forceFullscreen}>Send Test Inquiry</button>
           </form>
         </section>
       </main>
