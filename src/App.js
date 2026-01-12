@@ -108,7 +108,7 @@ function App() {
     <div className="App">
       <header>
         <nav>
-          <h2 className="logo">Mequment Seifu</h2>
+          <h2 className="logo">Mequanent Seifu</h2>
           <ul>
             <li><a href="#about">Profile</a></li>
             <li><a href="#services">Services</a></li>
