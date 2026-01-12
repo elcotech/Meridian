@@ -32,7 +32,7 @@ function App() {
       ['Web Design & Development', 'Full-stack web development using modern frameworks (React, PHP) with responsive design principles.'],
       ['Advanced Computer Maintenance & Networking', 'Enterprise-level hardware troubleshooting, Cisco network scaling, and IT infrastructure management.'],
       ['Bot Development & Automation', 'Custom bot development for process automation, data processing, and intelligent systems.'],
-      ['Curriculum Development', 'Designing cutting-edge IT education programs aligned with industry standards and technological trends.'],
+      ['Educational framework development', 'Designing cutting-edge IT education programs aligned with industry standards and technological trends.'],
       ['Technical Consultation', 'Expert guidance on IT infrastructure, system optimization, and digital transformation strategies.']
     ],
 
