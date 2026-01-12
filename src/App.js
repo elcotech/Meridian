@@ -234,7 +234,7 @@ function App() {
 
         {/* CONTACT SECTION */}
         <section className="section" id="contact">
-          <h2><span className="section-icon">📞</span> Professional Contact</h2>
+          <h2><span className="section-icon">📞</span> Contact me</h2>
           
           {submitMessage && (
             <div className={`alert-message ${submitMessage.includes('✅') ? 'success' : 'error'}`}>
