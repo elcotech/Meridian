@@ -324,7 +324,7 @@ function App() {
       
       <footer className="footer">
         <div className="footer-content">
-          <p>© {new Date().getFullYear()} ✅ 🇮‌   🇦‌🇲‌   🇭‌🇪‌🇷‌🇪‌   🇫‌🇴‌🇷‌   🇾‌🇴‌🇺‌!</p>
+          <p>© {new Date().getFullYear()} ✅ 🇮‌   🇦‌🇲‌   🇭‌🇪‌🇷‌🇪‌   🇫‌🇴‌🇷‌   🇾‌🇴‌🇺‌</p>
           <p className="footer-tagline">Transforming Technology Education in Ethiopia</p>
           <div className="footer-links">
             <a href={`mailto:${content.email}`}>Email</a>
