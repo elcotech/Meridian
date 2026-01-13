@@ -108,7 +108,7 @@ function App() {
     <div className="App">
       <header>
         <nav>
-          <h2 className="logo">Curriculum Vitae</h2>
+          <h2 className="logo">C̤E̤O̤ o̤f̤ E̤L̤C̤O̤T̤E̤C̤H̤</h2>
           <ul>
             <li><a href="#about">Profile</a></li>
             <li><a href="#services">Services</a></li>
