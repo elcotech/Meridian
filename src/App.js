@@ -41,7 +41,7 @@ function App() {
       ['MSc in Information Technology Technical Teacher Education', 'Ethio-China University'],
       ['BSc in Technical Teacher Education (IT)', 'Ethio-China University '],
       ['Diploma in Special Needs and Language', 'Kotebe College'],
-      ['Diploma, IT Technician', 'Nifass Silk Poly-Technic College'],
+      ['Diploma, IT Technician', 'Nefassilk Poly-Technic College'],
       ['Coursework in Business Administration', 'Adama Science and Technology University']
     ],
 
